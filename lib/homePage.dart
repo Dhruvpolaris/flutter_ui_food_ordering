@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ui_food_ordering/tab_list.dart';
 import './widgets/list_item.dart';
 
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView(
         children: <Widget>[
           Padding(
@@ -37,19 +39,20 @@ class _HomePageState extends State<HomePage>
                   height: 45.0,
                   width: 45.0,
                   decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey.withOpacity(0.3),
-                            blurRadius: 6.0,
-                            spreadRadius: 4.0,
-                            offset: Offset(0.0, 3.0))
-                      ],
-                      color: Color(0xFFC6E7FE),
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: AssetImage('assets/tuxedo.png'),
-                        fit: BoxFit.contain,
-                      )),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(0.3),
+                          blurRadius: 6.0,
+                          spreadRadius: 4.0,
+                          offset: Offset(0.0, 3.0))
+                    ],
+                    color: Color(0xFFC6E7FE),
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage('assets/tuxedo.png'),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -65,7 +68,7 @@ class _HomePageState extends State<HomePage>
           Padding(
             padding: EdgeInsets.only(top: 5.0, left: 20),
             child: Text(
-              'RECIPES',
+              'CUISINES',
               style: GoogleFonts.notoSans(
                   fontWeight: FontWeight.w900, fontSize: 27.0),
             ),
@@ -122,7 +125,7 @@ class _HomePageState extends State<HomePage>
                   ListItem(
                     'Hamburger',
                     'assets/burger.png',
-                    '21',
+                    '24',
                     Color(0xFFFFE9C6),
                     Color(0xFFDA9551),
                   ),
@@ -136,7 +139,7 @@ class _HomePageState extends State<HomePage>
                   ListItem(
                     'Donuts',
                     'assets/doughnut.png',
-                    '15',
+                    '5',
                     Color(0xFFD7FADA),
                     Color(0xFF56CC7E),
                   ),
@@ -144,7 +147,7 @@ class _HomePageState extends State<HomePage>
               )),
           SizedBox(height: 20.0),
           Padding(
-            padding: EdgeInsets.only(left: 10,right: 10),
+            padding: EdgeInsets.only(left: 10, right: 10),
             child: TabBar(
               tabs: <Widget>[
                 Tab(
@@ -182,7 +185,7 @@ class _HomePageState extends State<HomePage>
                 TabList(),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

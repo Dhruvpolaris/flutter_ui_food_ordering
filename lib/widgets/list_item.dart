@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:ui_food_ordering/detail_screen.dart';
 
 class ListItem extends StatelessWidget {
   @required
@@ -21,7 +22,8 @@ class ListItem extends StatelessWidget {
       padding: EdgeInsets.only(left: 15.0),
       child: InkWell(
         onTap: () {
-          //Todo: Navigation
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => DetailScreen(name, price, imgUrl, name)));
         },
         child: Container(
           height: 175.0,
@@ -52,7 +54,7 @@ class ListItem extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              SizedBox(height:10.0),
+              SizedBox(height: 10.0),
               Text(
                 '\$' + price,
                 style: GoogleFonts.notoSans(

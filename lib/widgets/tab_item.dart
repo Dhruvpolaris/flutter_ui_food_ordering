@@ -14,8 +14,15 @@ class TabItem extends StatelessWidget {
   TabItem(this.foodName, this.rating, this.price, this.imgPath);
   @override
   Widget build(BuildContext context) {
+
+    var _showRating = true;
+    if(rating == '0')
+    { 
+      _showRating = false;
+    }
+
     return Padding(
-        padding: EdgeInsets.only(left:20.0,right: 20,top:15),
+        padding: EdgeInsets.only(left: 20.0, right: 20, top: 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -35,10 +42,17 @@ class TabItem extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(foodName,
+                      Container(
+                        width: 125.0,
+                        child: Text(
+                          foodName,
                           style: GoogleFonts.notoSans(
-                              fontSize: 15.0, fontWeight: FontWeight.w600)),
+                              fontSize: 15.0, fontWeight: FontWeight.w600),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
                       SizedBox(height: 3.0),
+                      _showRating ? SizedBox(height: 3.0) :
                       SmoothStarRating(
                           allowHalfRating: false,
                           onRatingChanged: (v) {},
