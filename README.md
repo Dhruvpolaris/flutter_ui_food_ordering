@@ -1,7 +1,7 @@
 # Flutter UI Food Ordering Application
 
 <p align="center"> 
-<img width="300" height="600" src="https://raw.githubusercontent.com/Dhruvpolaris/flutter_ui_food_ordering/master/Final_Output.gif">
+<img width="350" height="600" src="https://raw.githubusercontent.com/Dhruvpolaris/flutter_ui_food_ordering/master/Final_Output.gif">
 </p>
 
 ## Components used:
